@@ -1,0 +1,5 @@
+php-mongodb (1.1.2-1~dotdeb+8.1) stable; urgency=medium
+
+  * Imported Upstream version 1.1.2
+
+ -- Guillaume Plessis <gui@dotdeb.org>  Thu,  4 Feb 2016 19:03:42 -0800
