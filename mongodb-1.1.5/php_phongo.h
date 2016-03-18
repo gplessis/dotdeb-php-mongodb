@@ -28,7 +28,7 @@
 extern zend_module_entry mongodb_module_entry;
 
 /* FIXME: Its annoying to bump version. Move into phongo_version.h.in */
-#define MONGODB_VERSION_S "1.1.4"
+#define MONGODB_VERSION_S "1.1.5"
 #define MONGODB_STABILITY_S "stable"
 #define MONGODB_VERSION   MONGODB_VERSION_S
 
