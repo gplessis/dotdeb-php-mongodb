@@ -24,11 +24,11 @@ necessary to build a fully-functional MongoDB driver.</description>
   <email>derick@php.net</email>
   <active>yes</active>
  </lead>
- <date>2016-07-05</date>
- <time>18:24:20</time>
+ <date>2016-10-20</date>
+ <time>17:51:14</time>
  <version>
-  <release>1.1.8</release>
-  <api>1.1.8</api>
+  <release>1.1.9</release>
+  <api>1.1.9</api>
  </version>
  <stability>
   <release>stable</release>
@@ -36,9 +36,8 @@ necessary to build a fully-functional MongoDB driver.</description>
  </stability>
  <license uri="http://www.apache.org/licenses/LICENSE-2.0">Apache License</license>
  <notes>
-* PHPC-720: Do not persist SSL streams to avoid SSL reinitialization errors
-* PHPC-631: Regression tests for UTCDateTime::toDateTime()
-* PHPC-631: Fix timelib_time.f assignment in UTCDateTime::toDateTime()
+* PHPC-820: Upgrade libbson and libmongoc to 1.3.6
+* PHPC-820: Upgrade libbson and libmongoc to 1.3.6
  </notes>
  <contents>
   <dir name="/">
@@ -184,7 +183,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="4d876db12b4b19f17ffcafc1b6488861" name="src/libbson/src/bson/bson-reader.c" role="src" />
    <file md5sum="fa9d0dcbb77842c38f75deba2531b154" name="src/libbson/src/bson/bson-reader.h" role="src" />
    <file md5sum="d4277ba8b3bc0f7753931062eb0cd5eb" name="src/libbson/src/bson/bson-stdint-win32.h" role="src" />
-   <file md5sum="56421d9bcf1c47cc979977c20bb5edf5" name="src/libbson/src/bson/bson-stdint.h" role="src" />
+   <file md5sum="c290ac71f56cc48bb0c943870fc7ff6b" name="src/libbson/src/bson/bson-stdint.h" role="src" />
    <file md5sum="426c704e288104d8dd87cbbbeca9aa51" name="src/libbson/src/bson/bson-string.c" role="src" />
    <file md5sum="4ecbd4e7bf09ede19374cd87d4155164" name="src/libbson/src/bson/bson-string.h" role="src" />
    <file md5sum="2a16019c51864483f27676c83e12b293" name="src/libbson/src/bson/bson-thread-private.h" role="src" />
@@ -197,7 +196,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="34889442e7c5e4c54c3c60b2e0f77ebd" name="src/libbson/src/bson/bson-value.h" role="src" />
    <file md5sum="f80a6f4a82a8c86f63eaccc1c8d147ee" name="src/libbson/src/bson/bson-version-functions.c" role="src" />
    <file md5sum="b60ecb89018a8fa6ca6d16fd089ce952" name="src/libbson/src/bson/bson-version-functions.h" role="src" />
-   <file md5sum="d1485faa37ae97cbbbd511ad558397e7" name="src/libbson/src/bson/bson-version.h" role="src" />
+   <file md5sum="e725bf98bd6c75d311d3e801e2d79ac9" name="src/libbson/src/bson/bson-version.h" role="src" />
    <file md5sum="9036341d3488d5aec2b028fae66c8c6f" name="src/libbson/src/bson/bson-version.h.in" role="src" />
    <file md5sum="8108f0a5dd05650f53c3c2eca95d587c" name="src/libbson/src/bson/bson-writer.c" role="src" />
    <file md5sum="0aea55fb0deab9311812eefc9a0291d5" name="src/libbson/src/bson/bson-writer.h" role="src" />
@@ -223,8 +222,8 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="69650cd70a46ddf7541401203b22f00d" name="src/libbson/src/yajl/yajl_tree.h" role="src" />
    <file md5sum="8d8be470862bf4c55ee6344530e8eb38" name="src/libbson/src/yajl/yajl_version.c" role="src" />
    <file md5sum="4194a43380dfaef3ca94cb2ba30da1f2" name="src/libbson/src/yajl/yajl_version.h" role="src" />
-   <file md5sum="f82208cb1a0eac11d8d5726958ce9104" name="src/libbson/VERSION_CURRENT" role="src" />
-   <file md5sum="f82208cb1a0eac11d8d5726958ce9104" name="src/libbson/VERSION_RELEASED" role="src" />
+   <file md5sum="7178aad20a4973a4eef42fc1a0145061" name="src/libbson/VERSION_CURRENT" role="src" />
+   <file md5sum="7178aad20a4973a4eef42fc1a0145061" name="src/libbson/VERSION_RELEASED" role="src" />
    <file md5sum="1066d5c9a05b1b1cb8f4de5a7e291574" name="src/libmongoc/build/autotools/m4/ac_check_typedef.m4" role="src" />
    <file md5sum="e40a5f02f4d82a68b3df43d99dd92ed6" name="src/libmongoc/build/autotools/m4/ac_compile_check_sizeof.m4" role="src" />
    <file md5sum="b96bb8fad4ea5d66c6b3af718186e2e0" name="src/libmongoc/build/autotools/m4/ac_create_stdint_h.m4" role="src" />
@@ -262,10 +261,10 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="76e2c1a2aa19f5fab3661c992ac603fa" name="src/libmongoc/build/autotools/WeakSymbols.m4" role="src" />
    <file md5sum="cebe632a500714618bcd504042665d06" name="src/libmongoc/src/mongoc/mongoc-array-private.h" role="src" />
    <file md5sum="62bb69dffa4d2756c43bb06276cc6cc9" name="src/libmongoc/src/mongoc/mongoc-array.c" role="src" />
-   <file md5sum="b90b9c2c441ef50589aa5b4a40322fdb" name="src/libmongoc/src/mongoc/mongoc-async-cmd-private.h" role="src" />
-   <file md5sum="69a8374d05fda8cf8b698183d80c7cef" name="src/libmongoc/src/mongoc/mongoc-async-cmd.c" role="src" />
-   <file md5sum="aee92f5c2e025fd3dc8da9637824a072" name="src/libmongoc/src/mongoc/mongoc-async-private.h" role="src" />
-   <file md5sum="1d94a4dad26b26d3fa18e8012ebaa413" name="src/libmongoc/src/mongoc/mongoc-async.c" role="src" />
+   <file md5sum="9486ffdc142635e6bd47c113d2195a23" name="src/libmongoc/src/mongoc/mongoc-async-cmd-private.h" role="src" />
+   <file md5sum="a25a96e1eb23ceefa5575bad30124dc4" name="src/libmongoc/src/mongoc/mongoc-async-cmd.c" role="src" />
+   <file md5sum="8b297e5f2c883b75c8974c6b856cb797" name="src/libmongoc/src/mongoc/mongoc-async-private.h" role="src" />
+   <file md5sum="98869bf5f7a1fbe0001509e4264b1774" name="src/libmongoc/src/mongoc/mongoc-async.c" role="src" />
    <file md5sum="ddce6cc55b0dc69c11da1c8706462e1e" name="src/libmongoc/src/mongoc/mongoc-b64-private.h" role="src" />
    <file md5sum="6bcdf787033705c8d56d5ab6d2d5f152" name="src/libmongoc/src/mongoc/mongoc-b64.c" role="src" />
    <file md5sum="4671ed096a020fe21ba8342fb16abb0c" name="src/libmongoc/src/mongoc/mongoc-buffer-private.h" role="src" />
@@ -389,9 +388,9 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="3f6530302f233d487a44c8ce3dc45a0c" name="src/libmongoc/src/mongoc/mongoc-topology-description-private.h" role="src" />
    <file md5sum="f8401a63ff80140174be13ef996d9894" name="src/libmongoc/src/mongoc/mongoc-topology-description.c" role="src" />
    <file md5sum="70c41e9792dc744332b22762ba593d35" name="src/libmongoc/src/mongoc/mongoc-topology-private.h" role="src" />
-   <file md5sum="fa0c4c686d95e29b97f39db6e88a3c44" name="src/libmongoc/src/mongoc/mongoc-topology-scanner-private.h" role="src" />
-   <file md5sum="9e451ba52b688873042abca83cbb3200" name="src/libmongoc/src/mongoc/mongoc-topology-scanner.c" role="src" />
-   <file md5sum="1405db311f8b7712faf08c0b2aff9b40" name="src/libmongoc/src/mongoc/mongoc-topology.c" role="src" />
+   <file md5sum="4a95bea11399bff710bb2a04e38681cb" name="src/libmongoc/src/mongoc/mongoc-topology-scanner-private.h" role="src" />
+   <file md5sum="207d0cd5e3172ee12b76509c0ae0014e" name="src/libmongoc/src/mongoc/mongoc-topology-scanner.c" role="src" />
+   <file md5sum="a09751e5cc69237a16cf356a6a8fb4d9" name="src/libmongoc/src/mongoc/mongoc-topology.c" role="src" />
    <file md5sum="f8fe41c378f1b6a9c22e3a0c9195909a" name="src/libmongoc/src/mongoc/mongoc-trace.h" role="src" />
    <file md5sum="f2d7142c7e850f3f242154e729ab07eb" name="src/libmongoc/src/mongoc/mongoc-uri-private.h" role="src" />
    <file md5sum="51121710e2a197f518b891420a40069a" name="src/libmongoc/src/mongoc/mongoc-uri.c" role="src" />
@@ -400,7 +399,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="94bd0076ee62643a3f82faff1e2c1f5f" name="src/libmongoc/src/mongoc/mongoc-util.c" role="src" />
    <file md5sum="e699d508bdb2d3f5220bbc5bf413bae1" name="src/libmongoc/src/mongoc/mongoc-version-functions.c" role="src" />
    <file md5sum="13165cf1b16ef34ec8d72cb980705477" name="src/libmongoc/src/mongoc/mongoc-version-functions.h" role="src" />
-   <file md5sum="2bf5ec6aff0f37d4f8cd54f55b9a0e87" name="src/libmongoc/src/mongoc/mongoc-version.h" role="src" />
+   <file md5sum="91f2617cb27a6a714686ab039697d62a" name="src/libmongoc/src/mongoc/mongoc-version.h" role="src" />
    <file md5sum="2f63b4b1f86910aab6a6e7423af3f7a8" name="src/libmongoc/src/mongoc/mongoc-version.h.in" role="src" />
    <file md5sum="445de5fdc0a96238c91dcb0ed0066aa3" name="src/libmongoc/src/mongoc/mongoc-write-command-private.h" role="src" />
    <file md5sum="af74cd67eeb47c25bf901d8eb938b555" name="src/libmongoc/src/mongoc/mongoc-write-command.c" role="src" />
@@ -418,8 +417,8 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="dd22bb15cb70d35fe25192f0f304871b" name="src/libmongoc/src/mongoc/op-reply.def" role="src" />
    <file md5sum="03c6179a4fe8b51c606b03a763529d55" name="src/libmongoc/src/mongoc/op-update.def" role="src" />
    <file md5sum="94cc18fabf34abc9acbff2ec6c5293f6" name="src/libmongoc/src/mongoc/utlist.h" role="src" />
-   <file md5sum="f82208cb1a0eac11d8d5726958ce9104" name="src/libmongoc/VERSION_CURRENT" role="src" />
-   <file md5sum="f82208cb1a0eac11d8d5726958ce9104" name="src/libmongoc/VERSION_RELEASED" role="src" />
+   <file md5sum="7178aad20a4973a4eef42fc1a0145061" name="src/libmongoc/VERSION_CURRENT" role="src" />
+   <file md5sum="7178aad20a4973a4eef42fc1a0145061" name="src/libmongoc/VERSION_RELEASED" role="src" />
    <file md5sum="eac49ee20312812495efa351f7f5e866" name="src/bson.c" role="src" />
    <file md5sum="bebc35732bfee1cc066e6b69179372f4" name="tests/bson/bson-binary-001.phpt" role="test" />
    <file md5sum="23d700ccdf85be88ba90ade89c280e20" name="tests/bson/bson-binary_error-001.phpt" role="test" />
@@ -665,14 +664,14 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="ea43ce70051fcdebc2c4435ff30d540c" name="win32/bson-version.h" role="src" />
    <file md5sum="a48e0f7388bbb65ea5be67c0a4b95d26" name="win32/mongoc-config.h" role="src" />
    <file md5sum="da90315b6d70e48f4b940bd80ac63abe" name="win32/mongoc-version.h" role="src" />
-   <file md5sum="be041c2d5547b7e3751507f7aa5cd8ca" name="ChangeLog" role="doc" />
+   <file md5sum="f54a62197f47b13216d852d7eef2cee7" name="ChangeLog" role="doc" />
    <file md5sum="b1e01b26bacfc2232046c90a330332b3" name="LICENSE" role="doc" />
    <file md5sum="50befdabfe1b59ff8c7d8f20d0545c76" name="Makefile.frag" role="src" />
    <file md5sum="324f4d69acdeb1132691a570731e58a2" name="README.md" role="doc" />
    <file md5sum="f99c580b04875fa6d39a302ad8110ebd" name="RELEASE-0" role="doc" />
    <file md5sum="f28b9c1fe3faa9766fe6ee5b270383fe" name="RELEASE-1.0" role="doc" />
-   <file md5sum="8566b039e0f9dfb08a6ffefa6b05c58e" name="RELEASE-1.1" role="doc" />
-   <file md5sum="b28930bd22ffb68db9e6b0188e684e3e" name="RELEASE-1.1.8" role="doc" />
+   <file md5sum="9d488e5c3e41e62ff50c8ad52db62e70" name="RELEASE-1.1" role="doc" />
+   <file md5sum="1ca64808fa18f3f8151aeb27f3fa6532" name="RELEASE-1.1.9" role="doc" />
    <file md5sum="422ba17467e9aa074a0856a15519f543" name="Vagrantfile" role="test" />
    <file md5sum="4e3a2c82048a73ebbe405ba48f8e47a6" name="config.m4" role="src" />
    <file md5sum="ab2aa8a04de2170cf9e944a1f06fb72a" name="config.w32" role="src" />
@@ -680,7 +679,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="f9a151f3f337d86f577664a4abf7b314" name="phongo_compat.h" role="src" />
    <file md5sum="b35b14747f567a666fbd79f1e242ce78" name="php_bson.h" role="src" />
    <file md5sum="0cd22d99f0a89b134915a9ab8f2b8110" name="php_phongo.c" role="src" />
-   <file md5sum="3d33672598d5bc2866bcacf7558bb3a0" name="php_phongo.h" role="src" />
+   <file md5sum="7c195eb8dffe2b1eecb268cb2477cb9f" name="php_phongo.h" role="src" />
    <file md5sum="e0e1577c7291f296bc371d4a3a744203" name="php_phongo_classes.h" role="src" />
    <file md5sum="ce65acf2542b43366dabe2b2b40e6cb9" name="php_phongo_structs-5.h" role="src" />
    <file md5sum="2ab7dd3f9185fe6af6704e9d36599793" name="php_phongo_structs-7.h" role="src" />
