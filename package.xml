@@ -24,11 +24,11 @@ necessary to build a fully-functional MongoDB driver.</description>
   <email>derick@php.net</email>
   <active>yes</active>
  </lead>
- <date>2016-11-29</date>
- <time>15:59:59</time>
+ <date>2016-12-07</date>
+ <time>18:25:03</time>
  <version>
-  <release>1.2.0</release>
-  <api>1.2.0</api>
+  <release>1.2.1</release>
+  <api>1.2.1</api>
  </version>
  <stability>
   <release>stable</release>
@@ -37,125 +37,7 @@ necessary to build a fully-functional MongoDB driver.</description>
  <license uri="http://www.apache.org/licenses/LICENSE-2.0">Apache License</license>
  <notes>
 ** Bug
-    * [PHPC-316] - config.w32 should define MONGOC_ENABLE_SASL
-    * [PHPC-447] - Windows builds should generate libmongoc and libbson config and version files
-    * [PHPC-481] - Windows reports wrong mongoc and libbson versions
-    * [PHPC-520] - Document driver dependencies
-    * [PHPC-525] - Demonstrate non-empty $filter argument in Query constructor example
-    * [PHPC-530] - Document MongoDB\Driver\Server type constants
-    * [PHPC-554] - Rephrase unsupported/corrupt BSON messages
-    * [PHPC-625] - Document that persistent sockets should not be re-used after forking
-    * [PHPC-673] - Cursor::isDead() returns true despite cursor being alive
-    * [PHPC-674] - Advise users to install pkg-config for building the driver
-    * [PHPC-693] - Unacknowledged WriteResults have null counts
-    * [PHPC-728] - Wrong example on how to provide client certificate
-    * [PHPC-748] - CursorID is not properly expressed on 32-bit platforms
-    * [PHPC-756] - fromJSON() should not evaluate bson_error_t.message as boolean
-    * [PHPC-762] - undefined symbol: mongoc_write_concern_is_acknowledged
-    * [PHPC-788] - Timestamp on 32-bit platforms breaks
-    * [PHPC-790] - UTCDateTime constructor should truncate floats
-    * [PHPC-794] - BulkWrite::update() silently ignores invalid arguments
-    * [PHPC-801] - Empty ReadConcern and WriteConcern should serialize to BSON documents
-    * [PHPC-804] - Timestamp and UTCDateTime constructors should accept integers in strict types mode
-    * [PHPC-838] - Javascript objects are always serialized as BSON code types without scope
-
-** Epic
-    * [PHPC-542] - Remove dependency on mongoc private symbols
-
-** Improvement
-    * [PHPC-359] - Ensure read preference tags sets serialize as documents
-    * [PHPC-424] - Validate that read preference tag set is an array of documents
-    * [PHPC-433] - Persist topology state between requests
-    * [PHPC-486] - Add syntax highlighting to BSON persistence articles
-    * [PHPC-637] - Remind users that connection URIs should be encoded
-    * [PHPC-654] - Implement comparison handlers for BSON types
-    * [PHPC-676] - Do not allow BulkWrite objects to be executed multiple times
-    * [PHPC-684] - Report bypassDocumentValidation in BulkWrite debug output
-    * [PHPC-705] - Do not unnecessarily wrap filters in $query
-    * [PHPC-721] - Javascript constructor should throw if code contains null bytes
-    * [PHPC-724] - Regex constructor should throw if pattern or flags contain null bytes
-    * [PHPC-726] - Allow cross-platform serialization of Timestamp and UTCDateTime
-    * [PHPC-731] - Parse Timestamp argument as strings to accept large integers
-    * [PHPC-739] - Rename &quot;javascript&quot; to &quot;code&quot; in Javascript BSON class
-    * [PHPC-741] - Use consistent exceptions for BSON initialization methods
-    * [PHPC-742] - Regex constructor should default flags arg to empty string
-    * [PHPC-744] - Improve error messages for invalid Decimal128 and ObjectID strings
-    * [PHPC-746] - Default Manager URI to &quot;mongodb://127.0.0.1/&quot;
-    * [PHPC-754] - Remove libmongoc-priv system dependency in config.m4
-    * [PHPC-755] - Remove include of private mongoc-trace.h
-
-** New Feature
-    * [PHPC-459] - BSON objects should implement JsonSerializable
-    * [PHPC-460] - BSON classes should support PHP serialization and var_export()
-    * [PHPC-498] - ReadPreference, ReadConcern, and WriteConcern should serialize to BSON
-    * [PHPC-536] - UTCDateTime constructor should default to current time and accept DateTimeInterface
-    * [PHPC-552] - Implement ObjectID::getTimestamp() method
-    * [PHPC-619] - Implement Decimal 128 type spec
-    * [PHPC-716] - Support new readConcern level &quot;linearizable&quot;
-    * [PHPC-729] - Implement __toString() method for Javascript and Binary
-    * [PHPC-730] - Implement getCode() and getScope() for Javascript
-    * [PHPC-734] - Support providing collation per operation
-    * [PHPC-752] - Allow users to set a limit on acceptable staleness
-    * [PHPC-757] - Implement The MongoDB Handshake Protocol
-    * [PHPC-786] - Support appname in URI array options
-
-** Question
-    * [PHPC-723] - Blocking connect() leads to cumulative timeouts for multiple inaccessible servers
-
-** Task
-    * [PHPC-313] - BSON should throw when encountering 64-bit integer on 32-bit platform
-    * [PHPC-416] - Document SSL options
-    * [PHPC-504] - Document how RP, RC, and WC are serialized to BSON
-    * [PHPC-533] - Remove PHONGO_API macro for exported functions
-    * [PHPC-584] - Remove MkDocs documentation in favor of PHP.net documentation
-    * [PHPC-600] - Manager::getServers() should use mongoc_client_get_server_descriptions()
-    * [PHPC-601] - Cursor::getServer() should not access mongoc_cursor_t.client
-    * [PHPC-602] - Create command cursors with mongoc_cursor_new_from_command_document()
-    * [PHPC-603] - Use mongoc_read_prefs_t getters instead of accessing struct fields directly
-    * [PHPC-604] - WriteConcern::getJournal() should use mongoc_write_concern_journal_is_set()
-    * [PHPC-605] - Rely on libmongoc&apos;s socket handling and SSL implementation
-    * [PHPC-606] - Use mongoc_server_description_t public API
-    * [PHPC-607] - Manager::selectServer() should use mongoc_client_select_server()
-    * [PHPC-609] - Ensure client URI handling uses libmongoc public API
-    * [PHPC-610] - Client construction should use mongoc_write_concern_is_valid()
-    * [PHPC-611] - WriteResult::isAcknowledged() should use mongoc_write_concern_is_acknowledged()
-    * [PHPC-618] - Implement SDAM Monitoring spec
-    * [PHPC-629] - Upgrade libbson and libmongoc to 1.4.0
-    * [PHPC-630] - Update bson_visitor_t for unsupported type function pointer
-    * [PHPC-653] - Document WriteResult, WriteConcernError, and WriteError classes
-    * [PHPC-659] - Update bson_visitor_t for decimal 128 type function pointer
-    * [PHPC-662] - Use mongoc_bulk_operation_get_hint()
-    * [PHPC-663] - Use mongoc_bulk_operation_get_write_concern()
-    * [PHPC-664] - Use mongoc_write_concern_get_w()
-    * [PHPC-665] - Remove private libmongoc and libbson header includes
-    * [PHPC-680] - BulkWrite::count() should return number of operations instead of estimated round-trips
-    * [PHPC-682] - Do not use mongoc_bulk_operation_t private API in BulkWrite debug handler
-    * [PHPC-687] - Consolidate struct definitions for PHP 5 and 7
-    * [PHPC-688] - Do not use mongoc_cursor_t private API in Cursor debug handler
-    * [PHPC-689] - Query and command execution should use mongoc_cursor_set_hint()
-    * [PHPC-703] - Update configure scripts for upstream SSL changes
-    * [PHPC-704] - Do not set &quot;mongodb.debug&quot; based on Manager&apos;s $driverOptions[&quot;debug&quot;]
-    * [PHPC-708] - Port http://php.net/manual/en/mongo.security.php to the new docs/driver
-    * [PHPC-718] - Define extension dependencies
-    * [PHPC-751] - Document MongoDB\BSON\Decimal128
-    * [PHPC-758] - Disable Decimal128 for bundled libbson and libmongoc 1.4.0
-    * [PHPC-761] - Remove BSON_NAMESPACE constant
-    * [PHPC-769] - Javascript serialization, export, and dump should always include scope field
-    * [PHPC-777] - Document MongoDB\Driver\ReadConcern::LINEARIZABLE
-    * [PHPC-779] - Switch serialization from O type to C type
-    * [PHPC-780] - Document persistent connection behavior
-    * [PHPC-783] - Use mongoc_collection_find_with_opts() for Query execution
-    * [PHPC-789] - Remove __wakeup from BSON/* classes
-    * [PHPC-791] - Upgrade libbson and libmongoc to 1.5.0
-    * [PHPC-796] - Use flexible opts for BulkWrite update and delete
-    * [PHPC-799] - Create notice for all third party libraries
-    * [PHPC-805] - Query &quot;partial&quot; option is now &quot;allowPartialResults&quot;
-    * [PHPC-806] - Document Query options for mongoc_collection_find_with_opts()
-    * [PHPC-807] - Document &quot;collation&quot; option for Query and BulkWrite update/delete
-    * [PHPC-824] - SDAM spec update : Update the topology from each handshake
-    * [PHPC-826] - Document that socket paths must be URL-encoded
-    * [PHPC-827] - Update Max Staleness implementation
-    * [PHPC-829] - BSON Regex flags must be alphabetically ordered
+    * [PHPC-848] - Fix BSON encoding of immutable arrays and documents with circular references
  </notes>
  <contents>
   <dir name="/">
@@ -572,7 +454,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="94cc18fabf34abc9acbff2ec6c5293f6" name="src/libmongoc/src/mongoc/utlist.h" role="src" />
    <file md5sum="35c36e89ef751b74c7aa3b07d7e0f6b6" name="src/libmongoc/VERSION_CURRENT" role="src" />
    <file md5sum="35c36e89ef751b74c7aa3b07d7e0f6b6" name="src/libmongoc/VERSION_RELEASED" role="src" />
-   <file md5sum="7b1478887c401939672c39b616166fbf" name="src/bson.c" role="src" />
+   <file md5sum="ce97b478fcd4685782f053a2885ca522" name="src/bson.c" role="src" />
    <file md5sum="6353eaae171cb9a5c8a02f2ae08c879b" name="tests/bson/bson-binary-001.phpt" role="test" />
    <file md5sum="c0bcda775b56796c4a958cd4cd74d920" name="tests/bson/bson-binary-compare-001.phpt" role="test" />
    <file md5sum="0a87dad6d922760e623021996727d79c" name="tests/bson/bson-binary-compare-002.phpt" role="test" />
@@ -615,6 +497,7 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="d1be9224941f85b73491880c045f9c91" name="tests/bson/bson-fromPHP-001.phpt" role="test" />
    <file md5sum="d06d3e149b4049b069ac97446292e54a" name="tests/bson/bson-fromPHP-002.phpt" role="test" />
    <file md5sum="f63c536993d1f5c321194a1509a76b49" name="tests/bson/bson-fromPHP-003.phpt" role="test" />
+   <file md5sum="f90282eccdcec6a9e75c2bff3feefe52" name="tests/bson/bson-fromPHP-004.phpt" role="test" />
    <file md5sum="b0eecb69117e5a61228f9779b400b3fe" name="tests/bson/bson-fromPHP_error-001.phpt" role="test" />
    <file md5sum="e100a45e0dfc4a8efda78b72f6a2a9a4" name="tests/bson/bson-fromPHP_error-002.phpt" role="test" />
    <file md5sum="d523ccc510646a112529afd40982a3f7" name="tests/bson/bson-fromPHP_error-003.phpt" role="test" />
@@ -956,10 +839,10 @@ necessary to build a fully-functional MongoDB driver.</description>
    <file md5sum="5caa971cde3795f1d58973f81cb5b283" name="config.m4" role="src" />
    <file md5sum="f831bfe291cccc71b3edb2bdae991281" name="config.w32" role="src" />
    <file md5sum="7c05211bbc08da37633238c9879d7694" name="phongo_compat.c" role="src" />
-   <file md5sum="d1407006ed4291ae8d058c4bf8d8c498" name="phongo_compat.h" role="src" />
+   <file md5sum="9eb8d2ffb20d8ed814781b078ef13994" name="phongo_compat.h" role="src" />
    <file md5sum="fa8285606b0955dfdf4eaf0cd510ae9a" name="php_bson.h" role="src" />
    <file md5sum="fe1d27c4399a220469051c1b19b2fec4" name="php_phongo.c" role="src" />
-   <file md5sum="94b0d3d0b41cb3a63618e12e9e3dd607" name="php_phongo.h" role="src" />
+   <file md5sum="2b8a3aa745560aac36ab56c6e384d821" name="php_phongo.h" role="src" />
    <file md5sum="157ccb0b4a7bd91e5f56611c5b2acf87" name="php_phongo_classes.h" role="src" />
    <file md5sum="1b8eed24ee08e3cca5ccd0b67339f819" name="php_phongo_structs.h" role="src" />
   </dir>
