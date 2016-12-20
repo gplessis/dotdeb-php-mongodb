@@ -1,3 +1,10 @@
+php-mongodb (1.2.2-1~dotdeb+8.1) stable; urgency=medium
+
+  [ Guillaume Plessis ]
+  * Imported Upstream version 1.2.2
+
+ -- Guillaume Plessis <gui@dotdeb.org>  Tue, 20 Dec 2016 02:16:27 +0000
+
 php-mongodb (1.2.1-1~dotdeb+8.1) stable; urgency=medium
 
   [ Guillaume Plessis ]
